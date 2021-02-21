@@ -34,12 +34,22 @@ def sample_string(words:List[str]) -> str:
     return ' '.join(word_list)
 
 
-def test_first_word(sample_string:str):
+def test_first_word_type(sample_string:str):
+    result = main.first_word(sample_string)
+    assert isinstance(result, str)
+
+
+def test_first_word_result(sample_string:str):
     result = main.first_word(sample_string)
     assert sample_string.startswith(result)
 
 
-def test_last_word(sample_string:str):
+def test_last_word_type(sample_string:str):
+    result = main.last_word(sample_string)
+    assert isinstance(result, str)
+
+
+def test_last_word_result(sample_string:str):
     result = main.last_word(sample_string)
     assert sample_string.endswith(result)
 
