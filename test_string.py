@@ -35,19 +35,19 @@ def sample_string(words:List[str]) -> str:
 
 
 def test_first_word_type(sample_string:str):
-    assert isinstance(main.first_word(sample_string), str)
+    assert isinstance(main.first_word(sample_string), str), f"Check return type: {type(main.first_word(sample_string))}"
 
 
 def test_first_word_result_shorter_than_input(sample_string:str):
-    assert len(main.first_word(sample_string)) < len(sample_string)
+    assert len(main.first_word(sample_string)) < len(sample_string), f"Check len(result) = {len(main.first_word(sample_string))} vs len(sample_string) = {len(sample_string)}"
 
 
 def test_first_word_white_space_in_result(sample_string:str):
-    assert all(map(lambda x: x not in (' \t\n'), main.first_word(sample_string)))
+    assert all(map(lambda x: x not in (' \t\n'), main.first_word(sample_string))), f"Result includes (a) whitespace(s) : {repr(main.first_word(sample_string))}"
 
 
 def test_first_word_result(sample_string:str):
-    assert sample_string.startswith(main.first_word(sample_string))
+    assert sample_string.startswith(main.first_word(sample_string)), f"Check result = {main.first_word(sample_string)!r}, input string = {sample_string}"
 
 
 def test_last_word_type(sample_string:str):
