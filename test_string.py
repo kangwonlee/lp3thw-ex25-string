@@ -26,8 +26,9 @@ def words(url, scope='session') -> List[bytes]:
 def sample_string(words:List[str]) -> str:
     # https://docs/python.org/3/library/random.html
     min_words = 5
+    max_words = 10
     assert len(words) >= min_words
-    n = random.randint(min_words, min(10, len(words)))
+    n = random.randint(min_words, min(max_words, len(words)))
     word_list = list(map(lambda w:w.decode().strip(), random.choices(words, k=n)))
     random.shuffle(word_list)
     return ' '.join(word_list)
