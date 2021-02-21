@@ -1,7 +1,10 @@
 # ex25 string
 
-함수 `a_plus_twice_b()` 를 완성하시오. `b`에 2를 곱한 값과 `a`의 합을 반환하도록 하시오.<br>
-Complete the function `a_plus_twice_b()`.  Make it return the sum of `a` and the twice of `b`.
+함수 `last_word()` 를 완성하시오. 문자열 `a`를 단어별로 나누고 마지막 단어를 반환하시오.<br>
+Complete the function `last_word()`.  Split string `a` into words and return the last one.
+
+함수 `first_word()` 를 완성하시오. 문자열 `a`를 단어별로 나누고 첫번째 단어를 반환하시오.<br>
+Complete the function `first_word()`.  Split string `a` into words and return the first one.
 
 
 ## 제출하는 법<br>How to submit
