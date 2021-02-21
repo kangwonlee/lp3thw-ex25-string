@@ -42,6 +42,10 @@ def test_first_word_result_shorter_than_input(sample_string:str):
     assert len(main.first_word(sample_string)) < len(sample_string)
 
 
+def test_first_word_white_space_in_result(sample_string:str):
+    assert all(map(lambda x: x not in (' \t\n'), main.first_word(sample_string)))
+
+
 def test_first_word_result(sample_string:str):
     assert sample_string.startswith(main.first_word(sample_string))
 
@@ -52,6 +56,10 @@ def test_last_word_type(sample_string:str):
 
 def test_last_word_result_shorter_than_input(sample_string:str):
     assert len(main.last_word(sample_string)) < len(sample_string)
+
+
+def test_last_word_white_space_in_result(sample_string:str):
+    assert all(map(lambda x: x not in (' \t\n'), main.last_word(sample_string)))
 
 
 def test_last_word_result(sample_string:str):
