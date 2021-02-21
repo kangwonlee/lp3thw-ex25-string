@@ -7,7 +7,7 @@ random.seed()
 
 
 @pytest.fixture
-def int_a_b():
+def sample_string():
     return random.randint(-100, 100), random.randint(-100, 100)
 
 
