@@ -1,4 +1,8 @@
-def a_plus_twice_b(a, b):
+def first_word(a:str):
+    pass
+
+
+def last_word(a:str):
     pass
 
 
