@@ -35,23 +35,27 @@ def sample_string(words:List[str]) -> str:
 
 
 def test_first_word_type(sample_string:str):
-    result = main.first_word(sample_string)
-    assert isinstance(result, str)
+    assert isinstance(main.first_word(sample_string), str)
+
+
+def test_first_word_result_shorter_than_input(sample_string:str):
+    assert len(main.first_word(sample_string)) < len(sample_string)
 
 
 def test_first_word_result(sample_string:str):
-    result = main.first_word(sample_string)
-    assert sample_string.startswith(result)
+    assert sample_string.startswith(main.first_word(sample_string))
 
 
 def test_last_word_type(sample_string:str):
-    result = main.last_word(sample_string)
-    assert isinstance(result, str)
+    assert isinstance(main.last_word(sample_string), str)
+
+
+def test_last_word_result_shorter_than_input(sample_string:str):
+    assert len(main.last_word(sample_string)) < len(sample_string)
 
 
 def test_last_word_result(sample_string:str):
-    result = main.last_word(sample_string)
-    assert sample_string.endswith(result)
+    assert sample_string.endswith(main.last_word(sample_string))
 
 
 if "__main__" == __name__:
